@@ -38,7 +38,7 @@ If a name is ambiguous and no affiliation is given, ask once (batch) before star
 6. **Compose outputs.**
    - `briefing.md` — Markdown with schedule table at top, cards in meeting order
    - `briefing.html` — self-contained HTML via the template in `templates/briefing.html`
-   - `briefing.pdf` — render the HTML via Edge headless: `msedge --headless=new --disable-gpu --no-pdf-header-footer --print-to-pdf="<path>\briefing.pdf" "file:///<path>/briefing.html"`. Edge is at `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe` or `C:\Program Files\Microsoft\Edge\Application\msedge.exe` on this machine. Skip if Edge is unavailable.
+   - `briefing.pdf` — render the HTML via Google Chrome headless (macOS): `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu --no-pdf-header-footer --print-to-pdf="<path>/briefing.pdf" "file://<path>/briefing.html"`. Use the absolute folder path (expand `~`) and quote it, since it may contain spaces. Skip if Chrome is unavailable.
 7. **Save** to `~/Dropbox/Claude/seminar_briefing/YYYY-MM-DD_{host-slug}/`. If host institution is unclear, ask the user once or fall back to `YYYY-MM-DD_seminar`.
 8. **Report** file paths and offer to open the HTML or PDF.
 
@@ -75,7 +75,7 @@ All briefings live under `~/Dropbox/Claude/seminar_briefing/`. One subfolder per
 
 - Always cite **two papers** per person: one most-cited, one latest working paper. If you cannot find a recent working paper, fall back to most-recent-published and label it as such.
 - 2-4 lines per paper summary. Not 5. Not 1.
-- "Connection to your work" must be **specific**, not generic. Reference the user's themes from `user-profile.md` (equity lending, CDS, short-selling supply/demand, NAIC, IV designs, etc.) and find a concrete overlap or contrast.
+- "Connection to your work" must be **specific**, not generic. Reference the user's themes from `user-profile.md` (econometrics of networks, games and multiple equilibria, interdependent durations, subjective expectations, production functions, identification, etc.) and find a concrete overlap or contrast.
 - If a person cannot be confidently identified, write a brief card with a `[NEEDS USER INPUT]` flag and proceed with the rest.
 - Never fabricate citations. If you can't find a paper, say so.
 - Use `WebSearch` first (broad), then `WebFetch` on the top hit (deep). Never paste raw search-result blobs into the briefing.

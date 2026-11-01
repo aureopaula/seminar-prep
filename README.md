@@ -5,7 +5,7 @@ A Claude Code skill that turns a seminar-day schedule into a pre-meeting briefin
 ## Install
 
 ```bash
-git clone git@github.com:psaffi/seminar-prep.git ~/.claude/skills/seminar-prep
+git clone https://github.com/aureopaula/seminar-prep.git ~/.claude/skills/seminar-prep
 ```
 
 The folder must live at `~/.claude/skills/seminar-prep/` for Claude Code to discover it. After cloning, edit `user-profile.md` to match your research themes — that file feeds the "connection to your work" line in every briefing.
@@ -34,7 +34,7 @@ The skill parses names, asks for disambiguation if needed, dispatches one resear
 Each trip produces:
 - `briefing.md` — editable source of truth
 - `briefing.html` — self-contained, print-ready
-- `briefing.pdf` — rendered via Edge headless print
+- `briefing.pdf` — rendered via Google Chrome headless print
 
 ## Tuning
 
